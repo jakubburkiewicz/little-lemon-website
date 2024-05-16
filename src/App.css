@@ -129,7 +129,8 @@ img {
     color: var( --secondary-grey-color );
 }
 
-.headerNav .navList__link:hover {
+.headerNav .navList__link:hover,
+.headerNav .navList__link--active {
     color: var( --secondary-orange-color );
 }
 
@@ -151,6 +152,7 @@ img {
     color: var( --secondary-grey-color );
 }
 
-.footerNav .navList__link:hover {
+.footerNav .navList__link:hover,
+.footerNav .navList__link--active {
     color: var( --secondary-orange-color );
 }

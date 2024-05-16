@@ -1,46 +1,48 @@
+import { NavLink } from "react-router-dom"
+
 const Nav = props => (
     <nav { ...props }>
         <ul className="navList">
             <li className="navList__item">
-                <a
-                    className="navList__link"
-                    href="/"
-                >Home</a>
+                <NavLink
+                    className={ ( { isActive } ) => isActive ? 'navList__link navList__link--active' : 'navList__link' }
+                    to={ '/' }
+                >Home</NavLink>
             </li>
 
             <li className="navList__item">
-                <a
-                    className="navList__link"
-                    href="/about"
-                >About</a>
+                <NavLink
+                    className={ ( { isActive } ) => isActive ? 'navList__link navList__link--active' : 'navList__link' }
+                    to={ '/about' }
+                >About</NavLink>
             </li>
 
             <li className="navList__item">
-                <a
-                    className="navList__link"
-                    href="/menu"
-                >Menu</a>
+                <NavLink
+                    className={ ( { isActive } ) => isActive ? 'navList__link navList__link--active' : 'navList__link' }
+                    to={ '/menu' }
+                >Menu</NavLink>
             </li>
 
             <li className="navList__item">
-                <a
-                    className="navList__link"
-                    href="/reservations"
-                >Reservations</a>
+                <NavLink
+                    className={ ( { isActive } ) => isActive ? 'navList__link navList__link--active' : 'navList__link' }
+                    to={ '/reservations' }
+                >Reservations</NavLink>
             </li>
 
             <li className="navList__item">
-                <a
-                    className="navList__link"
-                    href="/order-online"
-                >Order online</a>
+                <NavLink
+                    className={ ( { isActive } ) => isActive ? 'navList__link navList__link--active' : 'navList__link' }
+                    to={ '/order-online' }
+                >Order online</NavLink>
             </li>
 
             <li className="navList__item">
-                <a
-                    className="navList__link"
-                    href="/login"
-                >Login</a>
+                <NavLink
+                    className={ ( { isActive } ) => isActive ? 'navList__link navList__link--active' : 'navList__link' }
+                    to={ '/login' }
+                >Login</NavLink>
             </li>
         </ul>
     </nav>
