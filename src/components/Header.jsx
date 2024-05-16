@@ -8,7 +8,7 @@ const Header = props => (
             alt="logo"
         />
 
-        <Nav class="headerNav" />
+        <Nav className="headerNav" />
     </header>
 )
 
