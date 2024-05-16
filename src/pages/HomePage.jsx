@@ -1,5 +1,9 @@
+import Jumbotron from "../components/Jumbotron"
+
 const HomePage = () => (
-    <>home</>
+    <>
+        <Jumbotron />
+    </>
 )
 
 export default HomePage
