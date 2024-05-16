@@ -1,3 +1,109 @@
+:root {
+    --radius: 16px;
+
+    --primary-green-color: #495E59;
+    --primary-yellow-color: #F4CE14;
+    --secondary-orange-color: #EE9972;
+    --secondary-orange-light-color: #FBDABB;
+    --secondary-grey-color: #333333;
+    --secondary-grey-light-color: #EDEFEE;
+
+    --serif-font-family: 'Markazi Text', serif;
+    --sans-serif-font-family: 'Karla', sans-serif;
+
+    --paragraph-font-family: var( --sans-serif-font-family );
+    --paragraph-font-size: 1rem;
+    --paragraph-font-weight: 400;
+    --paragraph-line-height: 1.5;
+
+    --highlight-font-family: var( --sans-serif-font-family );
+    --highlight-font-size: 1rem;
+    --highlight-font-weight: 500;
+    --highlight-line-height: 1.5;
+
+    --section-category-font-family: var( --sans-serif-font-family );
+    --section-category-font-size: 1rem;
+    --section-category-font-weight: 800;
+    --section-category-line-height: 1.5;
+
+    --card-title-font-family: var( --sans-serif-font-family );
+    --card-title-font-size: 1.125rem;
+    --card-title-font-weight: 700;
+    --card-title-line-height: 1.5;
+
+    --lead-font-family: var( --sans-serif-font-family );
+    --lead-font-size: 1.125rem;
+    --lead-font-weight: 500;
+    --lead-line-height: 1.5;
+
+    --section-title-font-family: var( --sans-serif-font-family );
+    --section-title-font-size: 1.25rem;
+    --section-title-font-weight: 800;
+    --section-title-line-height: 1.5;
+
+    --subtitle-font-family: var( --serif-font-family );
+    --subtitle-font-size: 2.5rem;
+    --subtitle-font-weight: 400;
+    --subtitle-line-height: 1.5;
+
+    --title-font-family: var( --serif-font-family );
+    --title-font-size: 4rem;
+    --title-font-weight: 500;
+    --title-line-height: 1.5;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-size: 16px;
+    font-family: var( --paragraph-font-family );
+    font-weight: var( --paragraph-font-weight );
+    line-height: var( --paragraph-line-height );
+}
+
+h1 {
+    font-family: var( --title-font-family );
+    font-size: var( --title-font-size );
+    font-weight: var( --title-font-weight );
+    line-height: var( --title-line-height );
+}
+
+h2 {
+    font-family: var( --subtitle-font-family );
+    font-size: var( --subtitle-font-size );
+    font-weight: var( --subtitle-font-weight );
+    line-height: var( --subtitle-line-height );
+}
+
+h3 {
+    font-family: var( --section-title-font-family );
+    font-size: var( --section-title-font-size );
+    font-weight: var( --section-title-font-weight );
+    line-height: var( --section-title-line-height );
+}
+
+h4 {
+    font-family: var( --card-title-font-family );
+    font-size: var( --card-title-font-size );
+    font-weight: var( --card-title-font-weight );
+    line-height: var( --card-title-line-height );
+}
+
+h5 {
+    font-family: var( --section-category-font-family );
+    font-size: var( --section-category-font-size );
+    font-weight: var( --section-category-font-weight );
+    line-height: var( --section-category-line-height );
+}
+
+p {
+    font-family: var( --paragraph-font-family );
+    font-size: var( --paragraph-font-size );
+    font-weight: var( --paragraph-font-weight );
+    line-height: var( --paragraph-line-height );
+}
+
 .header {
     display: flex;
     justify-content: space-between;
