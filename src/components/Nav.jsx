@@ -1,28 +1,46 @@
 const Nav = props => (
     <nav { ...props }>
-        <ul>
-            <li>
-                <a href="/">Home</a>
+        <ul className="navList">
+            <li className="navList__item">
+                <a
+                    className="navList__link"
+                    href="/"
+                >Home</a>
             </li>
 
-            <li>
-                <a href="/about">About</a>
+            <li className="navList__item">
+                <a
+                    className="navList__link"
+                    href="/about"
+                >About</a>
             </li>
 
-            <li>
-                <a href="/menu">Menu</a>
+            <li className="navList__item">
+                <a
+                    className="navList__link"
+                    href="/menu"
+                >Menu</a>
             </li>
 
-            <li>
-                <a href="/reservations">Reservations</a>
+            <li className="navList__item">
+                <a
+                    className="navList__link"
+                    href="/reservations"
+                >Reservations</a>
             </li>
 
-            <li>
-                <a href="/order-online">Order online</a>
+            <li className="navList__item">
+                <a
+                    className="navList__link"
+                    href="/order-online"
+                >Order online</a>
             </li>
 
-            <li>
-                <a href="/login">Login</a>
+            <li className="navList__item">
+                <a
+                    className="navList__link"
+                    href="/login"
+                >Login</a>
             </li>
         </ul>
     </nav>

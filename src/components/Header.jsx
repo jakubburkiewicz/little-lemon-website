@@ -2,9 +2,13 @@ import Nav from "./Nav"
 
 const Header = props => (
     <header { ...props }>
-        <img src="/Logo.svg" alt="logo" />
+        <img
+            className="headerLogo"
+            src="/Logo.svg"
+            alt="logo"
+        />
 
-        <Nav />
+        <Nav class="headerNav" />
     </header>
 )
 

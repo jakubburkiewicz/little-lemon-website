@@ -6,11 +6,11 @@ import Main from './components/Main';
 function App() {
   return (
     <>
-      <Header />
+      <Header className="header" />
 
-      <Main />
+      <Main className="main" />
 
-      <Footer />
+      <Footer className="footer" />
     </>
   );
 }

@@ -5,15 +5,16 @@ import SocialMediaLinks from "./SocialMediaLinks"
 const Footer = props => (
     <footer { ...props }>
         <img
+            className="footerLogo"
             src="/LogoVertical.png"
             alt="logo"
         />
 
-        <Nav />
+        <Nav className="footerNav" />
 
-        <ContactInfo />
+        <ContactInfo className="contactInfo" />
 
-        <SocialMediaLinks />
+        <SocialMediaLinks className="socialMediaLinks" />
     </footer>
 )
 
