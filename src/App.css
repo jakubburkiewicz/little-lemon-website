@@ -104,6 +104,13 @@ p {
     line-height: var( --paragraph-line-height );
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+
+    border-radius: var( --radius );
+}
+
 .header {
     display: flex;
     justify-content: space-between;
