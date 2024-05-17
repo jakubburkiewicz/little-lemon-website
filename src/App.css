@@ -329,6 +329,8 @@ img {
     float: right;
 
     margin: 0 0 2rem 2rem;
+
+    border-radius: var( --radius );
 }
 @media (min-width: 576px) {
     .jumbotron__image {
