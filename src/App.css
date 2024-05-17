@@ -112,8 +112,6 @@ p {
 img {
     max-width: 100%;
     height: auto;
-
-    border-radius: var( --radius );
 }
 
 .container {
@@ -122,24 +120,136 @@ img {
     padding: 0 1rem;
 }
 
+.button {
+    display: inline-block;
+
+    padding: 0.5rem 1.5rem;
+
+    border: none;
+    border-radius: var( --radius );
+
+    font-size: var( --lead-font-size );
+    font-weight: var( --lead-font-weight );
+    line-height: var( --lead-line-height );
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.button--primary {
+    background-color: var( --primary-yellow-color );
+    color: var( --secondary-grey-color );
+}
+.button--primary:hover {
+    background-color: var( --primary-green-color );
+    color: var( --secondary-grey-light-color );
+
+    box-shadow: 0 0 5px 2px var( --primary-yellow-color );
+}
+
+.button--text {
+    padding: 0;
+
+    background-color: transparent;
+    color: var( --primary-green-color );
+}
+.button--text:hover {
+    color: var( --primary-yellow-color );
+}
+
+.button--toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+
+    padding: 0;
+
+    border: 0;
+    border-radius: 0;
+    background: none;
+}
+
 .header {
+    position: relative;
+}
+
+.header .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    padding: 2rem;
+}
+
+.headerNavToggle {
+    display: none;
+}
+@media (max-width: 767px) {
+    .headerNavToggle {
+        display: block;
+    }
+}
+
+.headerNav {
+    max-height: 0vh;
+    overflow: hidden;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    background-color: var( --secondary-grey-light-color );
+
+    transition: max-height 0.3s;
+}
+@media (min-width: 768px) {
+    .headerNav {
+        max-height: none;
+        position: initial;
+
+        background-color: initial;
+    }
+}
+.headerNav--expanded {
+    max-height: 100vh;
 }
 
 .headerNav .navList {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     gap: 1rem;
 
+    padding: 2rem;
+    margin: 0;
+
+    text-align: center;
+
     list-style: none;
+}
+@media (min-width: 768px) {
+    .headerNav .navList {
+        flex-direction: row;
+        gap: 1rem;
+
+        padding: 0;
+    }
+}
+@media (min-width: 992px) {
+    .headerNav .navList {
+        gap: 2rem;
+    }
 }
 
 .headerNav .navList__link {
     text-decoration: none;
     color: var( --secondary-grey-color );
 }
-
 .headerNav .navList__link:hover,
 .headerNav .navList__link--active {
     color: var( --secondary-orange-color );
