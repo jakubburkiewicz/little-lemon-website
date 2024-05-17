@@ -62,7 +62,7 @@ body {
     line-height: var( --paragraph-line-height );
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
 }
@@ -197,7 +197,7 @@ img {
 }
 
 .jumbotron p {
-    padding: .5rem 0;
+    padding: 1.5rem 0;
 
     font-size: var( --lead-font-size );
     font-weight: var( --lead-font-weight );
