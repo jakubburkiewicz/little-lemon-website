@@ -1,3 +1,4 @@
+/* ===== Properties ===== */
 :root {
     --radius: 16px;
 
@@ -52,6 +53,7 @@
     --title-line-height: 1;
 }
 
+/* ===== Reset ===== */
 body {
     margin: 0;
     padding: 0;
@@ -114,6 +116,7 @@ img {
     height: auto;
 }
 
+/* ===== Common Elements ===== */
 .container {
     max-width: calc( 860px + 2rem );
     margin: 0 auto;
@@ -175,6 +178,7 @@ img {
     color: var( --primary-green-color );
 }
 
+/* ===== Header ===== */
 .header {
     position: relative;
 }
@@ -257,6 +261,7 @@ img {
     color: var( --secondary-orange-color );
 }
 
+/* ===== Footer ===== */
 .footer {
     display: flex;
     justify-content: space-between;
@@ -280,6 +285,7 @@ img {
     color: var( --secondary-orange-color );
 }
 
+/* ===== Jumbotron ===== */
 .jumbotron {
     display: flex;
     justify-content: space-between;
@@ -359,6 +365,7 @@ img {
     }
 }
 
+/* ===== Specials ===== */
 .specials {
     padding: 2rem 1rem;
 }
@@ -506,6 +513,7 @@ img {
     }
 }
 
+/* ===== Testimonials ===== */
 .testimonials {
     padding: 3rem 1rem;
 
