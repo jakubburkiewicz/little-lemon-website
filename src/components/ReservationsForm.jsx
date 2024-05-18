@@ -13,12 +13,28 @@ const ReservationsForm = ( {
     const handleSubmit = event => {
         event.preventDefault()
 
-        onFormSubmit( {
-            date,
-            time,
-            guests,
-            occasion
-        } )
+        const isFormValid = validForm()
+
+        if( isFormValid ) {
+            onFormSubmit( {
+                date,
+                time,
+                guests,
+                occasion
+            } )
+        }
+    }
+
+    const validForm = () => {
+        const form = document.querySelector( '.reservationsForm' )
+
+        if( form.checkValidity() ) {
+            return true
+        }
+
+        form.reportValidity()
+
+        return false
     }
 
     const handleDateChange = event => {
