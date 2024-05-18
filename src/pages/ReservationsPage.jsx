@@ -1,5 +1,9 @@
+import ReservationsForm from "../components/ReservationsForm"
+
 const ReservationsPage = () => (
-    <>reservations</>
+    <>
+        <ReservationsForm />
+    </>
 )
 
 export default ReservationsPage
