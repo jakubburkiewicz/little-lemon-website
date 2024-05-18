@@ -148,8 +148,6 @@ img {
 .button--primary:hover {
     background-color: var( --primary-green-color );
     color: var( --secondary-grey-light-color );
-
-    box-shadow: 0 0 5px 2px var( --primary-yellow-color );
 }
 
 .button--text {
@@ -339,6 +337,10 @@ img {
         top: 1rem;
         right: 1rem;
     }
+}
+
+.jumbotron .button:hover {
+    box-shadow: 0 0 5px 2px var( --primary-yellow-color );
 }
 
 /* ===== Specials ===== */
