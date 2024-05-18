@@ -3,35 +3,35 @@ import HomePage from "../pages/HomePage"
 import ReservationsPage from "../pages/ReservationsPage"
 import { useReducer } from "react"
 
+export const initializeTimes = () => {
+    return [
+        '17:00',
+        '18:00',
+        '19:00',
+        '20:00',
+        '21:00'
+    ]
+}
+
+export const fetchTimes = () => {
+    // TODO: Fetch available times from the server
+    return [
+        '19:00',
+        '20:00',
+        '21:00'
+    ]
+}
+
+export const updateTimes = ( times, action ) => {
+    switch ( action.type ) {
+        case 'update':
+            return fetchTimes()
+        default:
+            return times
+    }
+}
+
 const Main = props => {
-    const initializeTimes = () => {
-        return [
-            '17:00',
-            '18:00',
-            '19:00',
-            '20:00',
-            '21:00'
-        ]
-    }
-
-    const fetchTimes = () => {
-        // TODO: Fetch available times from the server
-        return [
-            '19:00',
-            '20:00',
-            '21:00'
-        ]
-    }
-
-    const updateTimes = ( times, action ) => {
-        switch ( action.type ) {
-            case 'update':
-                return fetchTimes()
-            default:
-                return times
-        }
-    }
-
     const [ availableTimes, availableTimesDispatch ] = useReducer( updateTimes, [], initializeTimes )
 
     const handleDateChange = event => {
