@@ -34,13 +34,18 @@ const ReservationsForm = ( {
 
     return (
         <form
+            aria-label="Reservations form"
             className="reservationsForm"
             onSubmit={ handleSubmit }
         >
             <label className="formField">
-                <span className="formField__label">Choose date</span>
+                <span
+                    id="dateLabel"
+                    className="formField__label"
+                >Choose date</span>
 
                 <input
+                    aria-labelledby="dateLabel"
                     className="formField__input"
                     type="date"
                     value={ date }
@@ -49,9 +54,13 @@ const ReservationsForm = ( {
             </label>
 
             <label className="formField">
-                <span className="formField__label">Choose time</span>
+                <span
+                    id="timeLabel"
+                    className="formField__label"
+                >Choose time</span>
 
                 <select
+                    aria-labelledby="timeLabel"
                     className="formField__input"
                     value={ time }
                     onChange={ handleTimeChange }
@@ -63,9 +72,13 @@ const ReservationsForm = ( {
             </label>
 
             <label className="formField">
-                <span className="formField__label">Number of guests</span>
+                <span
+                    id="guestsLabel"
+                    className="formField__label"
+                >Number of guests</span>
 
                 <input
+                    aria-labelledby="guestsLabel"
                     className="formField__input"
                     type="number"
                     placeholder="1"
@@ -77,9 +90,13 @@ const ReservationsForm = ( {
             </label>
 
             <label className="formField">
-                <span className="formField__label">Occasion</span>
+                <span
+                    id="occasionLabel"
+                    className="formField__label"
+                >Occasion</span>
 
                 <select
+                    aria-labelledby="occasionLabel"
                     className="formField__input"
                     value={ occasion }
                     onChange={ handleOccasionChange }
@@ -90,6 +107,7 @@ const ReservationsForm = ( {
             </label>
 
             <button
+                aria-label="Make Your reservation"
                 className="button button--primary"
                 type="submit"
             >

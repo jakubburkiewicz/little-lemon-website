@@ -42,7 +42,10 @@ const Main = props => {
     }
 
     return (
-        <main { ...props }>
+        <main
+            aria-label="Main content"
+            { ...props }
+        >
             <Routes>
                 <Route
                     path="/"

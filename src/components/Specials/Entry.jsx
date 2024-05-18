@@ -8,8 +8,14 @@ const SpecialsEntry = ( {
     description,
     href
 } ) => (
-    <article className="specialsEntry">
-        <h4 className="specialsEntry__heading">{ heading }</h4>
+    <article
+        aria-labelledby="specialsEntryHeading"
+        className="specialsEntry"
+    >
+        <h4
+            id="specialsEntryHeading"
+            className="specialsEntry__heading"
+        >{ heading }</h4>
 
         <span className="specialsEntry__price">{ price }</span>
 
@@ -22,6 +28,7 @@ const SpecialsEntry = ( {
         <p className="specialsEntry__description">{ description }</p>
 
         <Link
+            aria-label="Order a delivery"
             to={ href }
             className="button button--text specialsEntry__button"
         >

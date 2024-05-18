@@ -32,9 +32,15 @@ const testimonials = [
 ]
 
 const Testimonials = () => (
-    <section className="testimonials">
+    <section
+        aria-labelledby="testimonialsHeading"
+        className="testimonials"
+    >
         <header className="container testimonials__header">
-            <h1 className="testimonials__heading">Testimonials</h1>
+            <h1
+                id="testimonialsHeading"
+                className="testimonials__heading"
+            >Testimonials</h1>
         </header>
 
         <div className="container testimonials__entries">

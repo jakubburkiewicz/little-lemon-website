@@ -1,12 +1,15 @@
 const ContactInfo = props => (
-    <address { ...props }>
+    <address
+        aria-label="Contact Information"
+        { ...props }
+    >
         <p className="contactInfo__address">
             123 Main St<br />
             Chicago, IL 60654<br />
             United States<br />
             <a href="https://maps.app.goo.gl/GizDF1MKwJWWYomP6">Get Directions</a>
         </p>
-        
+
         <dl className="contactInfo__details">
             <dt className="contactInfoDetail__label">E-mail:</dt>
             <dd className="contactInfoDetail__value">

@@ -12,9 +12,13 @@ const Header = props => {
     }
 
     return (
-        <header { ...props }>
+        <header
+            aria-label="Header"
+            { ...props }
+        >
             <div className="container">
                 <HamburgerToggle
+                    aria-label="Toggle navigation"
                     className="button button--toggle headerNavToggle"
                     onClick={ handleNavToggle }
                 />
@@ -22,14 +26,16 @@ const Header = props => {
                 <img
                     className="headerLogo"
                     src="/Logo.svg"
-                    alt="logo"
+                    alt="Little Lemon logo"
                 />
 
                 <Nav
+                    aria-label="Main Navigation"
                     className={ `headerNav ${ navExpanded && 'headerNav--expanded' }` }
                 />
 
                 <BasketToggle
+                    aria-label="Toggle basket"
                     className="button button--toggle headerBasketToggle"
                 />
             </div>

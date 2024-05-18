@@ -3,19 +3,31 @@ import Nav from "./Nav"
 import SocialMediaLinks from "./SocialMediaLinks"
 
 const Footer = props => (
-    <footer { ...props }>
+    <footer
+        aria-label="Footer"
+        { ...props }
+    >
         <div className="container">
             <img
                 className="footerLogo"
                 src="/logoWhite.png"
-                alt="logo"
+                alt="Little Lemon logo"
             />
 
-            <Nav className="footerNav" />
+            <Nav
+                aria-label="Footer Navigation"
+                className="footerNav"
+            />
 
-            <ContactInfo className="contactInfo" />
+            <ContactInfo
+                aria-label="Contact Information"
+                className="contactInfo"
+            />
 
-            <SocialMediaLinks className="socialMediaLinks" />
+            <SocialMediaLinks
+                aria-label="Social Media Links"
+                className="socialMediaLinks"
+            />
         </div>
     </footer>
 )

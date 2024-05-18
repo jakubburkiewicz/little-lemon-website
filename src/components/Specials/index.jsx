@@ -27,11 +27,18 @@ const specials = [
 
 const Specials = () => {
     return (
-        <section className="specials">
+        <section
+            aria-labelledby="specialsHeading"
+            className="specials"
+        >
             <header className="container specials__header">
-                <h1 className="specials__heading">Specials</h1>
+                <h1
+                    id="specialsHeading"
+                    className="specials__heading"
+                >Specials</h1>
 
                 <Link
+                    aria-label="Online Menu"
                     to="/menu"
                     className="button button--primary"
                 >Online Menu</Link>

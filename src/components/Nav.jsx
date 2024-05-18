@@ -1,7 +1,10 @@
 import { NavLink } from "react-router-dom"
 
 const Nav = props => (
-    <nav { ...props }>
+    <nav
+        aria-label="Primary navigation"
+        { ...props }
+    >
         <ul className="navList">
             <li className="navList__item">
                 <NavLink

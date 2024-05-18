@@ -1,8 +1,11 @@
 const About = () => (
-    <article className="about">
+    <article
+        aria-labelledby="aboutHeading"
+        className="about"
+    >
         <div className="container">
             <div className="about__texts">
-                <h1>Little Lemon</h1>
+                <h1 id="aboutHeading">Little Lemon</h1>
 
                 <h2>Chicago</h2>
 

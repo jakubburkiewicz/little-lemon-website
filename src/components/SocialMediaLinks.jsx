@@ -3,10 +3,14 @@ import InstagramIcon from '../icons/InstagramIcon'
 import FacebookIcon from '../icons/FacebookIcon'
 
 const SocialMediaLinks = props => (
-    <ul { ...props }>
+    <ul
+        aria-label="Social Media Links"
+        { ...props }
+    >
         <li className="socialMediaLinks__item">
             <a
-                className="socialMediaLinks__item"
+                aria-label="Facebook"
+                className="socialMediaLinks__link"
                 href="https://www.facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -17,7 +21,8 @@ const SocialMediaLinks = props => (
 
         <li className="socialMediaLinks__item">
             <a
-                className="socialMediaLinks__item"
+                aria-label="X (formerly Twitter)"
+                className="socialMediaLinks__link"
                 href="https://www.x.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -28,7 +33,8 @@ const SocialMediaLinks = props => (
 
         <li className="socialMediaLinks__item">
             <a
-                className="socialMediaLinks__item"
+                aria-label="Instagram"
+                className="socialMediaLinks__link"
                 href="https://www.instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
