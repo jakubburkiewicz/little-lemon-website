@@ -1,8 +1,9 @@
-import { Route, Routes } from "react-router"
+import { Route, Routes, useNavigate } from "react-router"
 import HomePage from "../pages/HomePage"
 import ReservationsPage from "../pages/ReservationsPage"
+import ConfirmedReservationPage from "../pages/ConfirmedReservationPage"
 import { useEffect, useReducer, useState } from "react"
-import { fetchAPI } from "../utils/fakeAPI"
+import { fetchAPI, submitAPI } from "../utils/fakeAPI"
 
 export const initializeTimes = () => {
     return [
@@ -25,10 +26,21 @@ export const updateTimes = ( times, action ) => {
 
 const Main = props => {
     const [ date, setDate ] = useState( new Date() )
+    const [ reservation, setReservation ] = useState( {} )
     const [ availableTimes, availableTimesDispatch ] = useReducer( updateTimes, [], initializeTimes )
+    const navigate = useNavigate()
 
     const handleDateChange = event => {
         setDate( new Date( event.target.value ) )
+    }
+
+    const handleReservationFormSubmit = reservation => {
+        submitAPI( reservation )
+            .then( () => {
+                setReservation( reservation )
+
+                navigate( '/reservations/confirmed' )
+            } )
     }
 
     useEffect( () => {
@@ -58,6 +70,16 @@ const Main = props => {
                         <ReservationsPage
                             availableTimes={ availableTimes }
                             onDateChange={ handleDateChange }
+                            onFormSubmit={ handleReservationFormSubmit }
+                        />
+                    }
+                />
+
+                <Route
+                    path="/reservations/confirmed"
+                    element={
+                        <ConfirmedReservationPage
+                            reservation={ reservation }
                         />
                     }
                 />

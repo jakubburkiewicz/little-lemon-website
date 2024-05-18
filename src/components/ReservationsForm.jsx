@@ -2,7 +2,8 @@ import { useState } from "react"
 
 const ReservationsForm = ( {
     availableTimes,
-    onDateChange
+    onDateChange,
+    onFormSubmit
 } ) => {
     const [ date, setDate ] = useState( new Date().toISOString().split('T')[0] )
     const [ time, setTime ] = useState( '17:00' )
@@ -11,7 +12,13 @@ const ReservationsForm = ( {
 
     const handleSubmit = event => {
         event.preventDefault()
-        console.log("Form submitted")
+
+        onFormSubmit( {
+            date,
+            time,
+            guests,
+            occasion
+        } )
     }
 
     const handleDateChange = event => {
