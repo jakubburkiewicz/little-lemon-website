@@ -4,17 +4,19 @@ import SocialMediaLinks from "./SocialMediaLinks"
 
 const Footer = props => (
     <footer { ...props }>
-        <img
-            className="footerLogo"
-            src="/LogoVertical.png"
-            alt="logo"
-        />
+        <div className="container">
+            <img
+                className="footerLogo"
+                src="/logoWhite.png"
+                alt="logo"
+            />
 
-        <Nav className="footerNav" />
+            <Nav className="footerNav" />
 
-        <ContactInfo className="contactInfo" />
+            <ContactInfo className="contactInfo" />
 
-        <SocialMediaLinks className="socialMediaLinks" />
+            <SocialMediaLinks className="socialMediaLinks" />
+        </div>
     </footer>
 )
 

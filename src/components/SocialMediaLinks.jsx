@@ -1,15 +1,17 @@
+import XIcon from '../icons/XIcon'
+import InstagramIcon from '../icons/InstagramIcon'
+import FacebookIcon from '../icons/FacebookIcon'
+
 const SocialMediaLinks = props => (
     <ul { ...props }>
         <li className="socialMediaLinks__item">
             <a
                 className="socialMediaLinks__item"
                 href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
             >
-                <img
-                    className="socialMediaLinks__logo"
-                    src="/facebook.svg"
-                    alt="facebook"
-                />
+                <FacebookIcon />
             </a>
         </li>
 
@@ -17,12 +19,10 @@ const SocialMediaLinks = props => (
             <a
                 className="socialMediaLinks__item"
                 href="https://www.x.com"
+                target="_blank"
+                rel="noopener noreferrer"
             >
-                <img
-                    className="socialMediaLinks__logo"
-                    src="/x.svg"
-                    alt="x"
-                />
+                <XIcon />
             </a>
         </li>
 
@@ -30,12 +30,10 @@ const SocialMediaLinks = props => (
             <a
                 className="socialMediaLinks__item"
                 href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
             >
-                <img
-                    className="socialMediaLinks__logo"
-                    src="/instagram.svg"
-                    alt="instagram"
-                />
+                <InstagramIcon />
             </a>
         </li>
     </ul>
