@@ -696,6 +696,8 @@ img {
 .footer a {
     text-decoration: none;
     color: var( --secondary-grey-light-color );
+
+    transition: color 0.3s;
 }
 .footer a:hover {
     color: var( --primary-yellow-color );
