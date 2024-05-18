@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router"
 import HomePage from "../pages/HomePage"
 import ReservationsPage from "../pages/ReservationsPage"
-import { useReducer } from "react"
+import { useEffect, useReducer, useState } from "react"
+import { fetchAPI } from "../utils/fakeAPI"
 
 export const initializeTimes = () => {
     return [
@@ -13,33 +14,32 @@ export const initializeTimes = () => {
     ]
 }
 
-export const fetchTimes = () => {
-    // TODO: Fetch available times from the server
-    return [
-        '19:00',
-        '20:00',
-        '21:00'
-    ]
-}
-
 export const updateTimes = ( times, action ) => {
     switch ( action.type ) {
         case 'update':
-            return fetchTimes()
+            return action.payload
         default:
             return times
     }
 }
 
 const Main = props => {
+    const [ date, setDate ] = useState( new Date() )
     const [ availableTimes, availableTimesDispatch ] = useReducer( updateTimes, [], initializeTimes )
 
     const handleDateChange = event => {
-        availableTimesDispatch( {
-            date: event.target.value,
-            type: 'update'
-        } )
+        setDate( new Date( event.target.value ) )
     }
+
+    useEffect( () => {
+        fetchAPI( date )
+            .then( times => {
+                availableTimesDispatch( {
+                    type: 'update',
+                    payload: times
+                } )
+            } )
+    }, [ date ] )
 
     return (
         <main
