@@ -1,15 +1,8 @@
 import { useState } from "react"
 
-const availableTimes = [
-    '17:00',
-    '18:00',
-    '19:00',
-    '20:00',
-    '21:00',
-    '22:00'
-]
-
-const ReservationsForm = () => {
+const ReservationsForm = ( {
+    availableTimes
+} ) => {
     const [ date, setDate ] = useState( new Date().toISOString().split('T')[0] )
     const [ time, setTime ] = useState( '17:00' )
     const [ guests, setGuests ] = useState( 1 )

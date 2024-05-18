@@ -1,8 +1,12 @@
 import ReservationsForm from "../components/ReservationsForm"
 
-const ReservationsPage = () => (
+const ReservationsPage = ( {
+    availableTimes
+} ) => (
     <>
-        <ReservationsForm />
+        <ReservationsForm
+            availableTimes={ availableTimes }
+        />
     </>
 )
 
