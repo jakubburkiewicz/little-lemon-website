@@ -826,3 +826,21 @@ img {
 .contactInfoDetail__value {
     margin-left: 0.5rem;
 }
+
+/* ===== Confirmed Reservation ===== */
+.confirmedReservation {
+    padding: 3rem 1rem;
+
+    background-color: var( --secondary-grey-light-color );
+}
+
+.confirmedReservation .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.confirmedReservation h2 {
+    text-align: center;
+}

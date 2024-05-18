@@ -6,11 +6,13 @@ const ConfirmedReservationPage = ( {
             aria-label="Confirmed Reservation"
             className="confirmedReservation"
         >
-            <h2>Confirmed Reservation</h2>
+            <div className="container">
+                <h2>Confirmed Reservation</h2>
 
-            <p>
-                Your reservation for { reservation.date } at { reservation.time } has been confirmed.
-            </p>
+                <p>
+                    Your reservation for { reservation.date } at { reservation.time } has been confirmed.
+                </p>
+            </div>
         </article>
     )
 }
