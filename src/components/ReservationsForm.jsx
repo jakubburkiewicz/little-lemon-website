@@ -61,81 +61,85 @@ const ReservationsForm = ( {
             className="reservationsForm"
             onSubmit={ handleSubmit }
         >
-            <label className="formField">
-                <span
-                    id="dateLabel"
-                    className="formField__label"
-                >Choose date</span>
+            <div className="container">
+                <h1>Reservation</h1>
 
-                <input
-                    aria-labelledby="dateLabel"
-                    className="formField__input"
-                    type="date"
-                    value={ date }
-                    onChange={ handleDateChange }
-                />
-            </label>
+                <label className="formField">
+                    <span
+                        id="dateLabel"
+                        className="formField__label"
+                    >Choose date</span>
 
-            <label className="formField">
-                <span
-                    id="timeLabel"
-                    className="formField__label"
-                >Choose time</span>
+                    <input
+                        aria-labelledby="dateLabel"
+                        className="formField__input"
+                        type="date"
+                        value={ date }
+                        onChange={ handleDateChange }
+                    />
+                </label>
 
-                <select
-                    aria-labelledby="timeLabel"
-                    className="formField__input"
-                    value={ time }
-                    onChange={ handleTimeChange }
+                <label className="formField">
+                    <span
+                        id="timeLabel"
+                        className="formField__label"
+                    >Choose time</span>
+
+                    <select
+                        aria-labelledby="timeLabel"
+                        className="formField__input"
+                        value={ time }
+                        onChange={ handleTimeChange }
+                    >
+                        { availableTimes.map( time => (
+                            <option key={ time }>{ time }</option>
+                        ) ) }
+                    </select>
+                </label>
+
+                <label className="formField">
+                    <span
+                        id="guestsLabel"
+                        className="formField__label"
+                    >Number of guests</span>
+
+                    <input
+                        aria-labelledby="guestsLabel"
+                        className="formField__input"
+                        type="number"
+                        placeholder="1"
+                        min="1"
+                        max="10"
+                        value={ guests }
+                        onChange={ handleGuestsChange }
+                    />
+                </label>
+
+                <label className="formField">
+                    <span
+                        id="occasionLabel"
+                        className="formField__label"
+                    >Occasion</span>
+
+                    <select
+                        aria-labelledby="occasionLabel"
+                        className="formField__input"
+                        value={ occasion }
+                        onChange={ handleOccasionChange }
+                    >
+                        <option>Birthday</option>
+                        <option>Anniversary</option>
+                    </select>
+                </label>
+
+                <button
+                    aria-label="Make Your reservation"
+                    className="button button--primary"
+                    type="submit"
                 >
-                    { availableTimes.map( time => (
-                        <option key={ time }>{ time }</option>
-                    ) ) }
-                </select>
-            </label>
-
-            <label className="formField">
-                <span
-                    id="guestsLabel"
-                    className="formField__label"
-                >Number of guests</span>
-
-                <input
-                    aria-labelledby="guestsLabel"
-                    className="formField__input"
-                    type="number"
-                    placeholder="1"
-                    min="1"
-                    max="10"
-                    value={ guests }
-                    onChange={ handleGuestsChange }
-                />
-            </label>
-
-            <label className="formField">
-                <span
-                    id="occasionLabel"
-                    className="formField__label"
-                >Occasion</span>
-
-                <select
-                    aria-labelledby="occasionLabel"
-                    className="formField__input"
-                    value={ occasion }
-                    onChange={ handleOccasionChange }
-                >
-                    <option>Birthday</option>
-                    <option>Anniversary</option>
-                </select>
-            </label>
-
-            <button
-                aria-label="Make Your reservation"
-                className="button button--primary"
-                type="submit"
-            >
-                Make Your reservation
-            </button>
+                    Make Your reservation
+                </button>
+            </div>
         </form>
     )
 }
