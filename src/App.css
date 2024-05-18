@@ -176,6 +176,23 @@ img {
     color: var( --primary-green-color );
 }
 
+/* ===== Main Layout ===== */
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.main > *:last-child {
+    flex-grow: 1;
+}
+
 /* ===== Header ===== */
 .header {
     position: relative;
