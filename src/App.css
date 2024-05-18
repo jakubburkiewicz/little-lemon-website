@@ -913,9 +913,15 @@ img {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    align-items: center;
 }
 
 .confirmedReservation h2 {
+    text-align: center;
+}
+
+.confirmedReservation p {
+    font-size: var( --lead-font-size );
+    font-weight: var( --lead-font-weight );
+    line-height: var( --lead-line-height );
     text-align: center;
 }
