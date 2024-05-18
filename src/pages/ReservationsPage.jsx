@@ -1,11 +1,13 @@
 import ReservationsForm from "../components/ReservationsForm"
 
 const ReservationsPage = ( {
-    availableTimes
+    availableTimes,
+    onDateChange
 } ) => (
     <>
         <ReservationsForm
             availableTimes={ availableTimes }
+            onDateChange={ onDateChange }
         />
     </>
 )
