@@ -225,7 +225,7 @@ img {
     right: 0;
     z-index: 100;
 
-    background-color: var( --secondary-grey-light-color );
+    background-color: var( --secondary-grey-color );
 
     transition: max-height 0.3s;
 }
@@ -269,7 +269,7 @@ img {
 
 .headerNav .navList__link {
     text-decoration: none;
-    color: var( --secondary-grey-color );
+    color: var( --secondary-grey-light-color );
 }
 .headerNav .navList__link:hover,
 .headerNav .navList__link--active {
